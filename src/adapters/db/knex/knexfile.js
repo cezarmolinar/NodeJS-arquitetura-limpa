@@ -1,11 +1,15 @@
 const { Client } = require("knex");
 const dotenv = require("dotenv");
 dotenv.config({ path: "../../../../../.env" });
+//dotenv.config({ path: "./.env" });
 
-// console.log(process.env.DB_URL);
+// console.log("CONEXAO", process.env.DB_URL);
+// console.log(
+//   "===================================================================="
+// );
 module.exports = {
   client: "pg",
-  connection: process.env.DB_URL, //"postgres://postgres:1234@localhost:5432/arquitetura",
+  connection: "postgres://postgres:1234@localhost:5432/arquitetura",
   migrations: {
     tableName: "knex_migrations",
   },
